@@ -1,0 +1,131 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled3.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyP6hd3EDgsYYsqza/jOuU0l",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/remre/StriveSchool-ai/blob/main/week2/sol/34_42_numpy_sol\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jxGSpbtK9sNC"
+      },
+      "source": [
+        "#### 34. How to get all the dates corresponding to the month of July 2016? (★★☆)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kUQCiqQl9ssn",
+        "outputId": "b78af97d-27ab-489b-c4b2-6afd941fa083"
+      },
+      "source": [
+        "import numpy as np\n",
+        "x =np.arange('2016-07', '2016-08', dtype='datetime64[D]')#\"D\" stands for day u can change it with M and Y\n",
+        "x"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array(['2016-07-01', '2016-07-02', '2016-07-03', '2016-07-04',\n",
+              "       '2016-07-05', '2016-07-06', '2016-07-07', '2016-07-08',\n",
+              "       '2016-07-09', '2016-07-10', '2016-07-11', '2016-07-12',\n",
+              "       '2016-07-13', '2016-07-14', '2016-07-15', '2016-07-16',\n",
+              "       '2016-07-17', '2016-07-18', '2016-07-19', '2016-07-20',\n",
+              "       '2016-07-21', '2016-07-22', '2016-07-23', '2016-07-24',\n",
+              "       '2016-07-25', '2016-07-26', '2016-07-27', '2016-07-28',\n",
+              "       '2016-07-29', '2016-07-30', '2016-07-31'], dtype='datetime64[D]')"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AG30p6O092m7"
+      },
+      "source": [
+        "#### 42. Consider two random array A and B, check if they are equal (★★☆)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FsGwGJu3938_",
+        "outputId": "1f1b159c-b941-4fee-be3f-28cb2d834ba1"
+      },
+      "source": [
+        "A= np.random.rand()\n",
+        "B=np.random.rand()\n",
+        "#everthing below is one of the solutions\n",
+        "#check the code is working well\n",
+        "np.array_equal(A, B, equal_nan=True)\n",
+        "#np.equal(A,B)\n",
+        "#A==B"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Xq2rw0PC9-to"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
